@@ -1,5 +1,7 @@
 var express = require('express');
 var bcrypt = require('bcryptjs');
+var jwt = require('jsonwebtoken');
+var SEED = require('../config/config').SEED
 var app = express();
 var Usuario = require('../models/usuario')
 
@@ -28,11 +30,16 @@ app.get('/', ( req,res, next) =>{
 });
 
 
+
 // ==================================================
-// Actualizar  usuario
+// Verificar token
 // ===============================================
 
-app.
+app.use('/', (req , res , next) =>{
+
+    var token = req.query.token,
+})
+
 
 // ==================================================
 // Actualizar  usuario
